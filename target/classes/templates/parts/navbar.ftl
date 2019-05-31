@@ -28,6 +28,11 @@
                 </li>
             </#if>
             <#if user??>
+                <li class="nav-item">
+                    <a class="nav-link" href="/song/add">Upload Songs</a>
+                </li>
+            </#if>
+            <#if user??>
             <li class="nav-item">
                 <a class="nav-link" href="/tag">Tags</a>
             </li>

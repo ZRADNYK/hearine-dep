@@ -15,6 +15,8 @@ public interface SongRepo extends JpaRepository<Song, Long> {
 
     Song findByPrivateName(String privateName);
 
+    Song findBySongPath(String songPath);
+
     Set<Song> findSongsByAddedToPlaylists(Playlist playlist);
 
     Set<Song> findByTags(Tag tag);

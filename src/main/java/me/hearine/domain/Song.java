@@ -18,6 +18,7 @@ public class Song {
     private String privateName;
     private String length;
 
+    private String fileType;
     private String songPath;
 
     @ManyToMany(cascade=CascadeType.ALL)
@@ -53,6 +54,15 @@ public class Song {
     private Set<Tag> tags = new HashSet<>();
 
     public Song() {
+    }
+
+    public Song(String publicName, String resultFilename, String contentType, String path) {
+        this.publicName = publicName;
+        this.privateName = resultFilename;
+        //     this.releaseDate = new Date(1970- 1 - 1);
+        this.fileType = contentType;
+        this.length = String.valueOf(-1);
+        this.songPath = path;
     }
 
     public Long getId() {
@@ -93,6 +103,14 @@ public class Song {
 
     public void setPrivateName(String privateName) {
         this.privateName = privateName;
+    }
+
+    public String getFileType() {
+        return fileType;
+    }
+
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
     }
 
     public Set<Playlist> getAddedToPlaylists() {

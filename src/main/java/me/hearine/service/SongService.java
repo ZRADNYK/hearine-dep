@@ -5,17 +5,19 @@ import me.hearine.domain.Genre;
 import me.hearine.domain.Playlist;
 import me.hearine.domain.Song;
 import me.hearine.domain.Tag;
+import me.hearine.exception.FileStorageException;
+import me.hearine.exception.MyFileNotFoundException;
 import me.hearine.repos.AlbumRepo;
 import me.hearine.repos.PlaylistRepo;
 import me.hearine.repos.SongRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
 import java.io.IOException;
-import java.util.List;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 @Service
 public class SongService {
@@ -81,6 +83,45 @@ public class SongService {
         // set length ???
         song.addToPlaylist(playlist);
         songRepo.save(song);
+    }
+
+
+    @Value("${upload.path}")
+    private String uploadPath;
+
+    public Song storeFile(MultipartFile file) throws IOException {
+        // Normalize file name
+        //String fileName = StringUtils.cleanPath(file.getOriginalFilename);
+        java.util.Date date = new Date();
+        File uploadDir = new File(uploadPath + date.toString());
+
+        if (!uploadDir.exists()) {
+            uploadDir.mkdir();
+        }
+        //String origName = file.getOriginalFilename().split('.')
+        String uuidFile = UUID.randomUUID().toString();
+        String resultFilename = uuidFile + "." + file.getName();
+        String path = uploadDir.getAbsolutePath() + "/" + resultFilename;
+        file.transferTo(new File(path));
+
+        // Check if the file's name contains invalid characters
+        if (resultFilename.contains("..")) {
+            throw new FileStorageException("Sorry! Filename contains invalid path sequence " + resultFilename);
+        }
+
+        Song song = new Song(file.getOriginalFilename(), resultFilename, file.getContentType(), path);
+
+        return songRepo.save(song);
+    }
+
+
+    public Song getFile(Long fileId) {
+        return songRepo.findById(fileId)
+                .orElseThrow(() -> new MyFileNotFoundException("File not found with id " + fileId));
+    }
+
+    public Song findBySongPath(String songPath) {
+        return songRepo.findBySongPath(songPath);
     }
 
 }
