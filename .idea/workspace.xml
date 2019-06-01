@@ -4,24 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/src/main/resources/templates/parts/navbar.ftl" line="23" mnemonic="8" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="630bb287-5b7d-40d2-a242-247aad16bb1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/hearine/config/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/hearine/config/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/hearine/controller/SongController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/hearine/controller/SongController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/album/albumAvailableSongs.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/album/albumAvailableSongs.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/album/albumEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/album/albumEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/band/bandEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/band/bandEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/genre/genreEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/genre/genreEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/login.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistAvailableAlbums.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistAvailableAlbums.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistAvailableSongs.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistAvailableSongs.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/song/songEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/song/songEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/song/uploadSong.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/song/uploadSong.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/tag/tagEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/tag/tagEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/user/settings.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/user/settings.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/user/userEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/user/userEdit.ftl" afterDir="false" />
-    </list>
+    <list default="true" id="630bb287-5b7d-40d2-a242-247aad16bb1f" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -62,11 +45,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/song/uploadSong.ftl">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="407">
-              <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
+            <state relative-caret-position="47">
+              <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="360">
+              <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -571,12 +563,12 @@
       <workItem from="1559310306998" duration="7177000" />
       <workItem from="1559341798131" duration="3954000" />
       <workItem from="1559383956111" duration="759000" />
-      <workItem from="1559402855333" duration="2775000" />
+      <workItem from="1559402855333" duration="3026000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248554000" />
+    <option name="totallyTimeSpent" value="248805000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,12 +581,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1533" height="875" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Web" order="3" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.28244787" />
+      <window_info active="true" content_ui="combo" id="Project" order="4" visible="true" weight="0.28244787" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -610,7 +603,7 @@
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.052139036" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.328877" />
-      <window_info active="true" anchor="bottom" id="Run" order="14" visible="true" weight="0.06300268" />
+      <window_info anchor="bottom" id="Run" order="14" visible="true" weight="0.06300268" />
       <window_info anchor="right" id="Bean Validation" order="0" weight="0.32952252" />
       <window_info anchor="right" id="Database" order="1" weight="0.32952252" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -709,13 +702,6 @@
             <element signature="e#2765#2766#0" expanded="true" />
             <element signature="e#2805#2806#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" selection-start-line="30" selection-end-line="30" />
         </state>
       </provider>
     </entry>
@@ -1028,8 +1014,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/song/uploadSong.ftl">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="35" column="68" selection-start-line="35" selection-start-column="68" selection-end-line="35" selection-end-column="68" />
+        <state relative-caret-position="47">
+          <caret line="11" column="14" lean-forward="true" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="23" lean-forward="true" selection-start-line="24" selection-start-column="23" selection-end-line="24" selection-end-column="23" />
         </state>
       </provider>
     </entry>

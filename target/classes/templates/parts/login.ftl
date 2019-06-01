@@ -63,7 +63,7 @@
             </#if>
         </div>
     </#if>
-    <input type="hidden" name="_csrf" value="${_csrf.token}" />
+ <!--   <input type="hidden" name="_csrf" value="$csrf.token}" /> -->
     <#if !isRegisterForm><a href="/registration">Add new user</a></#if>
     <button class="btn btn-primary" type="submit"><#if isRegisterForm>Create<#else>Sign In</#if></button>
 </form>
