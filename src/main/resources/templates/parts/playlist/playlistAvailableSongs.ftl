@@ -15,7 +15,7 @@
             </table>
             <input type="hidden" value="${song.id}" name="songId">
         </#list>
-        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+  <!--      <input type="hidden" name="_csrf" value="_csrf.token}"/> -->
         <button type="submit" class="btn btn-primary ml-2">Add to playlist</button>
     </form>
 </@c.page>

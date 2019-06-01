@@ -15,7 +15,7 @@
                     </div>
                 </#if>
             </div>
-            <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+         <!--   <input type="hidden" name="_csrf" value="${_csrf.token}"/> -->
             <input type="hidden" name="id" value="<#if tag??>${tag.id}</#if>"/>
             <div class="form-group">
                 <button type="submit" class="btn btn-primary">Save tag</button>

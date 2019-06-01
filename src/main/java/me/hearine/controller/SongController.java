@@ -47,7 +47,7 @@ public class SongController {
 
     @GetMapping("/song")
     public String songList(@AuthenticationPrincipal User user,
-                            @RequestParam(required = false, defaultValue = "") String songFilter,
+                                @RequestParam(required = false, defaultValue = "") String songFilter,
                            Model model) {
         Iterable<Song> songs;
 

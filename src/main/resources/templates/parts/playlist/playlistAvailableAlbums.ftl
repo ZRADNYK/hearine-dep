@@ -22,7 +22,7 @@
                 No albums
             </#list>
         </div>
-        <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+   <!--     <input type="hidden" name="_csrf" value="_csrf.token}"/> -->
         <button type="submit" class="btn btn-primary ml-2">Add to album</button>
     </form>
 </@c.page>

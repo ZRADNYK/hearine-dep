@@ -15,25 +15,25 @@
                 <h3>Upload Single File</h3>
                 <form method="post" id="singleUploadForm" name="singleUploadForm">
                     <input id="singleFileUploadInput" type="file" name="file" class="file-input" required />
-                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+
                     <button type="submit" class="primary submit-btn">Submit</button>
                 </form>
                 <div class="upload-response">
-                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+
                     <div id="singleFileUploadError"></div>
                     <div id="singleFileUploadSuccess"></div>
                 </div>
             </div>
             <div class="multiple-upload">
                 <h3>Upload Multiple Files</h3>
-                <form method="post" enctype="multipart/form-data" id="multipleUploadForm" name="multipleUploadForm">
+                <form method="post"  id="multipleUploadForm" name="multipleUploadForm">
                     <input id="multipleFileUploadInput" type="file" name="files" class="file-input" multiple required />
-                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
+
                     <button type="submit" class="primary submit-btn">Submit</button>
                 </form>
                 <div class="upload-response">
-                    <input type="hidden" name="_csrf" value="${_csrf.token}"/>
-                    <div id="multipleFileUploadError"></div>
+
+ <!--                   <div id="multipleFileUploadError"></div> -->
                     <div id="multipleFileUploadSuccess"></div>
                 </div>
             </div>
