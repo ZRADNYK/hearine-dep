@@ -3,10 +3,11 @@
 <@c.page>
     <h3>${userChannel.username}</h3>
     <#if !isCurrentUser>
+        <#if !isSubscriber>
+            <a class="btn btn-info" href="/user/subscribe/${userChannel.id}">Subscribe</a>
+        </#if>
         <#if isSubscriber>
             <a class="btn btn-info" href="/user/unsubscribe/${userChannel.id}">Unsubscribe</a>
-        <#else>
-            <a class="btn btn-info" href="/user/subscribe/${userChannel.id}">Subscribe</a>
         </#if>
     </#if>
     <#if isCurrentUser>
@@ -36,7 +37,7 @@
             </div>
         </div>
     </div>
-    <#if isCurrentUser>
+    <#if user??>
         <#include "../playlist/playlistList.ftl" />
     </#if>
 
