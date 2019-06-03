@@ -12,7 +12,11 @@
         <tbody>
         <#list songs as song>
             <tr>
-                <td>${song.publicName}</td>
+                <td><audio controls>
+                        <source src= ${song.songPath} type="audio/ogg; codecs=vorbis">
+                        Тег audio не поддерживается вашим браузером.
+                    </audio>
+                    ${song.publicName}</td>
                 <td></td>
             </tr>
         </#list>

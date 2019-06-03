@@ -21,7 +21,7 @@ public class ControllerUtils {
         return bindingResult.getFieldErrors().stream().collect(collector);
     }
 
-   public static String saveFile(@RequestParam("file") MultipartFile file,
+   public static String saveFile(@RequestParam("file") MultipartFile file, // fixme modify for c1oud store
                           String path) throws IOException {
         File uploadDir = new File(path);
 
