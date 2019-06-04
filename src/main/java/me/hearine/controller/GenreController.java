@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.Map;
 
 @Controller
-public class GenreController {  //fixme adding as band
+public class GenreController {
 
     @Autowired
     private GenreService genreService;

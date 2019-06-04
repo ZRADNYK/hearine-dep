@@ -96,7 +96,7 @@ public class SongService {
     @Value("${upload.path}")
     private String uploadPath;
 
-    public Song storeFile(MultipartFile file) throws IOException {
+    public Song storeFile(MultipartFile file) throws Exception {
 
         String uuidFile = UUID.randomUUID().toString();
         String resultFilename = uuidFile + "." + file.getName();

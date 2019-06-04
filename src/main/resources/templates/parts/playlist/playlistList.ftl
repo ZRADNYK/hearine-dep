@@ -4,7 +4,7 @@
     <#list playlists as playlist>
         <div class="card my-3">
             <#if playlist.avatar??>
-                <img src="/img/${playlist.avatar}" class="card-img-top">
+                <img src=${playlist.avatar} class="card-img-top">
             </#if>
             <div class="m-2">
                 <i>Name: ${playlist.name}</i><br/>

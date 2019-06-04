@@ -94,7 +94,7 @@ public class SongController {
 
 
     @PostMapping("/uploadFile")
-    public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) throws IOException {
+    public UploadFileResponse uploadFile(@RequestParam("file") MultipartFile file) throws Exception {
         Song songFromDb = songService.storeFile(file);
 
         String fileDownloadUri = ServletUriComponentsBuilder.fromCurrentContextPath()
@@ -113,7 +113,7 @@ public class SongController {
                 .map(file -> {
                     try {
                         return uploadFile(file);
-                    } catch (IOException e) {
+                    } catch (Exception e) {
                         e.printStackTrace();
                     }
                     return null;

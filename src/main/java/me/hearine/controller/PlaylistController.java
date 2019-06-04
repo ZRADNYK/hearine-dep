@@ -68,7 +68,7 @@ public class PlaylistController {
             @RequestParam String list_type,
             @RequestParam("file") MultipartFile file,
             Model model
-    ) throws IOException {
+    ) throws Exception {
         if (bindingResult.hasErrors()) {
             Map<String, String> errorsMap = ControllerUtils.getErrors(bindingResult);
 

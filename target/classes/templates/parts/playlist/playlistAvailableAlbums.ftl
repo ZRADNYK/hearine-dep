@@ -8,7 +8,7 @@
                 <div class="card my-3">
                     <div class="m-2">
                         <#if album.avatar??>
-                            <img src="/img/${album.avatar}" class="card-img-top">
+                            <img src=${album.avatar} class="card-img-top">
                         </#if>
                         <i>Name: ${album.name} <input type="checkbox" name="${album.name}">
                         <label for="add">Add</label></i><br/>

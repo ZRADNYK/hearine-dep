@@ -2,6 +2,8 @@ package me.hearine.service;
 
 import me.hearine.domain.Role;
 import me.hearine.domain.User;
+import me.hearine.domain.cloud.CloudinaryUtils;
+import me.hearine.exception.FileStorageException;
 import me.hearine.repos.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -11,8 +13,10 @@ import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.util.*;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 @Service
@@ -28,6 +32,9 @@ public class UserService implements UserDetailsService {
 
     @Value("${hostname}")
     private String hostname;
+
+    private static Logger log = Logger.getLogger(UserService.class.getName());
+
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
@@ -132,6 +139,31 @@ public class UserService implements UserDetailsService {
         if (isEmailChanged) {
             sendMessage(user);
         }
+    }
+
+    public void updateUserAvatar(User user, MultipartFile avatar) throws Exception {
+            String avatarPath = storeFile(avatar);
+            user.setAvatar(avatarPath);
+            userRepo.save(user);
+        }
+
+    private String storeFile(MultipartFile file) throws Exception {
+        String uuidFile = UUID.randomUUID().toString();
+        String resultFilename = uuidFile + "." + file.getName();
+
+        log.info("User avatar " + file.getName() + " now has name " + resultFilename);
+        log.info("Starting uploading image " + resultFilename + " to Cloudinary storage");
+
+        String url = CloudinaryUtils.uploadFileToCloud(file, resultFilename);
+
+        // Check if the file's name contains invalid characters
+        if (resultFilename.contains("..")) {
+            log.warning("Image name " + resultFilename + " has invalid characters");
+            throw new FileStorageException("Sorry! Filename contains invalid path sequence " + resultFilename);
+        }
+        log.info("Image " + resultFilename + " has been uploaded to Cloudinary successfully");
+
+        return url;
     }
 
     public void subscribe(User currentUser, User user) {

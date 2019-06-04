@@ -17,7 +17,7 @@ import java.util.Set;
 
 @Controller
 @RequestMapping("/user")
-public class UserController { // fixme unsubscribe
+public class UserController { // fixme unsubscribe, avatar
     @Autowired
     private UserService userService;
 

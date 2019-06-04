@@ -2,6 +2,8 @@ package me.hearine.service;
 
 import me.hearine.controller.ControllerUtils;
 import me.hearine.domain.*;
+import me.hearine.domain.cloud.CloudinaryUtils;
+import me.hearine.exception.FileStorageException;
 import me.hearine.repos.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,18 +11,13 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.logging.Logger;
 
 @Service
 public class AlbumService {
 
-    @Value("${upload.path}")
-    private String uploadPath;
-
-    private String avatarPath = uploadPath + "/Album";
+    private static Logger log = Logger.getLogger(AlbumService.class.getName());
 
     @Autowired
     private AlbumRepo albumRepo;
@@ -161,12 +158,33 @@ public class AlbumService {
 
         if(file != null) {
             try {
-                album.setAvatar(ControllerUtils.saveFile(file, uploadPath));
-            } catch (IOException e) {
+                String avatarPath = storeFile(file);
+                album.setAvatar(avatarPath);
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
         albumRepo.save(album);
+        log.info("Album " + name + " has been added to database successfully");
+    }
+
+    private String storeFile(MultipartFile file) throws Exception {
+        String uuidFile = UUID.randomUUID().toString();
+        String resultFilename = uuidFile + "." + file.getName();
+
+        log.info("Album avatar " + file.getName() + " now has name " + resultFilename);
+        log.info("Starting uploading image " + resultFilename + " to Cloudinary storage");
+
+        String url = CloudinaryUtils.uploadFileToCloud(file, resultFilename);
+
+        // Check if the file's name contains invalid characters
+        if (resultFilename.contains("..")) {
+            log.warning("Song name " + resultFilename + " has invalid characters");
+            throw new FileStorageException("Sorry! Filename contains invalid path sequence " + resultFilename);
+        }
+        log.info("Image " + resultFilename + " has been uploaded to Cloudinary successfully");
+
+        return url;
     }
     /*
 
