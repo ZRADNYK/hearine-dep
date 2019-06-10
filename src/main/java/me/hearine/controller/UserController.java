@@ -3,6 +3,7 @@ package me.hearine.controller;
 import me.hearine.domain.Playlist;
 import me.hearine.domain.Role;
 import me.hearine.domain.User;
+import me.hearine.service.PlaylistService;
 import me.hearine.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
@@ -12,14 +13,19 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 @Controller
 @RequestMapping("/user")
 public class UserController { // fixme unsubscribe, avatar
+
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private PlaylistService playlistService;
 
     @GetMapping("/")
     public String greeting(Map<String, Object> model) {
@@ -126,23 +132,26 @@ public class UserController { // fixme unsubscribe, avatar
             @AuthenticationPrincipal User currentUser,
             @RequestParam(required = false) Playlist playlist
     ) {
-        Set<Playlist> playlists = user.getPlaylists();
+        List<Playlist> playlists;
+        if(user.equals(currentUser)) {
+            playlists = playlistService.findAll();
+        }
+        else {
+            playlists = playlistService.findByAuthorAndLstAccess(user, "public");
+        }
+
+        model.addAttribute("playlists", playlists);
+        model.addAttribute("user", currentUser);
+        model.addAttribute("isCurrentUser", currentUser.equals(user));
+        model.addAttribute("isAdmin", currentUser.isAdmin());
+
 
         model.addAttribute("subscribersCount", user.getSubscribers().size());
         model.addAttribute("subscriptionsCount", user.getSubscriptions().size());
         model.addAttribute("isSubscriber", user.getSubscriptions().contains(currentUser));
         model.addAttribute("userChannel", user);
-        model.addAttribute("playlists", playlists);
-        model.addAttribute("playlist", playlist);
-        model.addAttribute("isCurrentUser", currentUser.equals(user));
 
         return "parts/user/profile";
     }
-
-
-
-    // первый блок - поdписки
-    // второй блок - плейлисты
-    // настройки - отdельно
 
 }

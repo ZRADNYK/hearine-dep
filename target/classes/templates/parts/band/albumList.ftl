@@ -6,7 +6,7 @@
     <#list albums as album>
         <div class="card my-3">
                 <#if album.avatar??>
-                <img class="card-img-top" src=${album.avatar} />
+                <img class="card-img-top" src=${album.avatar} />    
                 </#if>
             <div class="m-2">
                 <i>Name: ${album.name}</i><br/>

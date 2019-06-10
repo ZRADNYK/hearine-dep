@@ -39,7 +39,7 @@ create table album (
         avatar varchar(2000),
         create_date datetime,
         dsc varchar(2000),
-        list_type varchar(255),
+        lstType varchar(255),
         name varchar(255) not null,
         user_id bigint not null,
         primary key (id) );

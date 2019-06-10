@@ -2,7 +2,6 @@ package me.hearine.domain;
 
 import javax.persistence.*;
 import java.util.Date;
-import java.util.HashSet;
 import java.util.Set;
 
 
@@ -16,7 +15,8 @@ public class Playlist {
 
     private String name;
     private Date create_date;
-    private String list_type;
+    private String lstType;
+    private String lstAccess;
     private String avatar; // ref
     private String dsc;
 
@@ -57,12 +57,12 @@ public class Playlist {
         this.create_date = create_date;
     }
 
-    public String getList_type() {
-        return list_type;
+    public String getLstType() {
+        return lstType;
     }
 
-    public void setList_type(String list_type) {
-        this.list_type = list_type;
+    public void setLstType(String lstType) {
+        this.lstType = lstType;
     }
 
     public String getDsc() {
@@ -101,29 +101,37 @@ public class Playlist {
         this.songs.addAll(songs);
     }
 
+    public String getLstAccess() {
+        return lstAccess;
+    }
+
+    public void setLstAccess(String lstAccess) {
+        this.lstAccess = lstAccess;
+    }
+
     public Playlist() {}
 
-     /*public Playlist(String name, Date create_date, String list_type, String access_level) {
+     /*public Playlist(String name, Date create_date, String lstType, String access_level) {
         this.name = name;
         this.create_date = create_date;
-        this.list_type = list_type;
+        this.lstType = lstType;
         this.access_level = access_level;
       //  this.songs = songs;
     }
 
-    public Playlist(String name, Date create_date, String list_type, String access_level, String dsc, HashSet<User> user) {
+    public Playlist(String name, Date create_date, String lstType, String access_level, String dsc, HashSet<User> user) {
         this.name = name;
         this.create_date = create_date;
-        this.list_type = list_type;
+        this.lstType = lstType;
         this.access_level = access_level;
         this.dsc = dsc;
         this.subscribers = user;
       //  this.songs = songs;
     }
 
-    public Playlist(String name, String list_type) {
+    public Playlist(String name, String lstType) {
         this.name = name;
-        this.list_type = list_type;
+        this.lstType = lstType;
     }
     public Playlist() {}
 

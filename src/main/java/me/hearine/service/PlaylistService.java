@@ -13,10 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import java.util.Collections;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import java.util.*;
 import java.util.logging.Logger;
 
 @Service
@@ -53,19 +50,20 @@ public class PlaylistService {
     }
 
     public void save(User author, Playlist playlist, String playlistName,
-                     String list_type, MultipartFile file
-                     ) throws Exception {
+                     String list_type, String list_access, MultipartFile file
+    ) throws Exception {
 
         playlist.setAuthor(author);
         playlist.setCreate_date(new java.sql.Date(System.currentTimeMillis()));
         playlist.setName(playlistName);
-        playlist.setList_type(list_type);
-        if(file != null) {
+        playlist.setLstType(list_type);
+        playlist.setLstAccess(list_access);
+        if (file != null) {
             String avatarPath = storeFile(file);
             playlist.setAvatar(avatarPath);
         }
         playlistRepo.save(playlist);
-        log.info("Playlist " + playlistName +  " has been uploaded to Cloudinary successfully");
+        log.info("Playlist " + playlistName + " has been uploaded to Cloudinary successfully");
 
     }
 
@@ -107,17 +105,16 @@ public class PlaylistService {
         playlist.setCreate_date(new java.sql.Date(System.currentTimeMillis()));
         for (String key : form.keySet()) {
             Album nextAlbum = albumRepo.findByName(key);
-            if(nextAlbum != null) {
+            if (nextAlbum != null) {
                 for (Song nextSong : nextAlbum.getSongs()) // fix
                     if (nextSong != null) {
                         playlist.addSongs(Collections.singleton(nextSong));
                     }
             }
-      //      else break;
+            //      else break;
         }
         playlistRepo.save(playlist);
     }
-
 
 
     public List<Playlist> findAll() {
@@ -128,4 +125,44 @@ public class PlaylistService {
         return playlistRepo.findByName(name);
     }
 
+    public List<Playlist> findByNameContaining(String name) {
+        return playlistRepo.findByNameContaining(name);
+    }
+
+    public List<Playlist> findByLstTypeContaining(String type) {
+        return playlistRepo.findByLstTypeContaining(type);
+    }
+
+    public List<Playlist> findByDscContaining(String dsc) {
+        return playlistRepo.findByDscContaining(dsc);
+    }
+
+    public List<Playlist> findByLstAccess(String access) {
+        return playlistRepo.findByLstAccess(access);
+    }
+
+    public List<Playlist> findByAuthorAndLstAccess(User author, String access) {
+        return playlistRepo.findByAuthorAndLstAccess(author, access);
+    }
+
+    public List<Playlist> findByNameContainingAndLstAccess(String name, String lstAccess) {
+        return playlistRepo.findByNameContainingAndLstAccess(name, lstAccess);
+    }
+
+
+    public List<Playlist> searchBy(String playlistFilter, String access) {
+        List<Playlist> playlists;
+        if (playlistFilter != null && !playlistFilter.isEmpty()) {
+            playlists = playlistRepo.findByNameContaining(playlistFilter);
+            if (playlists.size() == 0) {
+                playlists = playlistRepo.findByLstTypeContaining(playlistFilter);
+            }
+            if (playlists.size() == 0) {
+                playlists = playlistRepo.findByDscContaining(playlistFilter);
+            }
+        } else {
+            playlists = playlistRepo.findByLstAccess(access);
+        }
+        return playlists;
+    }
 }

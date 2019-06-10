@@ -39,24 +39,21 @@ public class PlaylistController {
     @Autowired
     private AlbumService albumService;
 
-    // список всех плейлистов
+    // список  публичных плейлистов
     @GetMapping("/playlist")
     public String playlistList(@RequestParam(required = false, defaultValue = "") String playlistFilter,
-                               @AuthenticationPrincipal User user, Model model) {
-        Iterable<Playlist> playlists;
+                               @AuthenticationPrincipal User user, Model model) {  // fixme
 
-        if (playlistFilter != null && !playlistFilter.isEmpty()) {
-            playlists = Collections.singleton(playlistService.findByName(playlistFilter));
-        } else {
-            playlists = playlistService.findAll();
-        }
+        List<Playlist> playlists = playlistService.searchBy(playlistFilter, "public");
+
+        model.addAttribute("playlists", playlists);
         model.addAttribute("user", user);
         model.addAttribute("isAdmin", user.isAdmin());
-        model.addAttribute("playlists", playlists);
         model.addAttribute("playlistFilter", playlistFilter);
 
         return "mainPlaylist";
     }
+
 
     // новый плейлист
     @PostMapping("/playlist")
@@ -65,7 +62,8 @@ public class PlaylistController {
             @Valid Playlist playlist,
             BindingResult bindingResult,
             @RequestParam String name,
-            @RequestParam String list_type,
+            @RequestParam String lstType,
+            @RequestParam String lstAccess,
             @RequestParam("file") MultipartFile file,
             Model model
     ) throws Exception {
@@ -79,7 +77,7 @@ public class PlaylistController {
 
             model.addAttribute("playlist", null);
 
-            playlistService.save(user, playlist, name, list_type, file);
+            playlistService.save(user, playlist, name, lstType, lstAccess, file);
         }
 
         Iterable<Playlist> playlists = playlistService.findAll();

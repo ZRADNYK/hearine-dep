@@ -17,7 +17,7 @@
             </div>
             <div class="form-group">
                 <input type="text" class="form-control"
-                       value="<#if playlist??>${playlist.list_type}</#if>" name="list_type" placeholder="Тип плейлиста">
+                       value="<#if playlist??>${playlist.lstType}</#if>" name="lstType" placeholder="Тип плейлиста">
                 <#if tagError??>
                     <div class="invalid-feedback">
                         ${tagError}
@@ -32,6 +32,18 @@
                         ${tagError}
                     </div>
                 </#if>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="lstAccess" id="public" value="public" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Public playlist
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="lstAccess" id="private" value="private">
+                <label class="form-check-label" for="exampleRadios2">
+                    Private playlist
+                </label>
             </div>
             <div class="form-group">
                 <div class="custom-file">

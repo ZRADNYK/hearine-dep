@@ -44,7 +44,7 @@ public class User implements UserDetails {
     )
     private Set<User> subscribers = new HashSet<>();
 
-    @ManyToMany(cascade=CascadeType.ALL)
+    @ManyToMany(cascade=CascadeType.ALL) // fixme
     @JoinTable(
             name = "user_subscription",
             joinColumns = { @JoinColumn(name = "subscriber_id") },

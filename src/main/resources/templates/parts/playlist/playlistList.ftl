@@ -8,7 +8,7 @@
             </#if>
             <div class="m-2">
                 <i>Name: ${playlist.name}</i><br/>
-                <i>List type: ${playlist.list_type}</i><br/>
+                <i>List type: ${playlist.lstType}</i><br/>
                 <span>Desc: ${playlist.dsc}</span><br/>
             </div>
              <div class="card-footer text-muted">
