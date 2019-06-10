@@ -5,29 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="630bb287-5b7d-40d2-a242-247aad16bb1f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__listAccess.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/trashcan/myPlaylists.ftl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/hearine/controller/PlaylistController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/hearine/controller/PlaylistController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/hearine/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/hearine/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/hearine/domain/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/hearine/domain/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/hearine/domain/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/hearine/domain/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/hearine/repos/PlaylistRepo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/hearine/repos/PlaylistRepo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/me/hearine/service/PlaylistService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/me/hearine/service/PlaylistService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__InitDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__InitDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/parts/user/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/parts/user/profile.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__InitDB.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V1__InitDB.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/hearine/controller/PlaylistController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/hearine/controller/PlaylistController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/hearine/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/hearine/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/hearine/domain/Playlist.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/hearine/domain/Playlist.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/hearine/repos/PlaylistRepo.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/hearine/repos/PlaylistRepo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/me/hearine/service/PlaylistService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/me/hearine/service/PlaylistService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/band/albumList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/band/albumList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/playlist/playlistEdit.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/playlist/playlistEdit.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/playlist/playlistList.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/playlist/playlistList.ftl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/parts/user/profile.ftl" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/parts/user/profile.ftl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,7 +43,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/me/hearine/repos/PlaylistRepo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+              <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -72,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/hearine/service/PlaylistService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="229">
+            <state relative-caret-position="1935">
               <caret line="143" column="55" selection-start-line="143" selection-start-column="55" selection-end-line="143" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,11 +60,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/me/hearine/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
-              <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+            <state relative-caret-position="3">
+              <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -172,7 +160,6 @@
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/album/albumSongList.ftl" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/parts/playlist/playlistSongList.ftl" />
         <option value="$PROJECT_DIR$/src/notes.txt" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
         <option value="$PROJECT_DIR$/src/main/java/me/hearine/service/SongService.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/hearine/controller/SongController.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/hearine/service/ServiceUtils.java" />
@@ -202,6 +189,7 @@
         <option value="$PROJECT_DIR$/src/main/java/me/hearine/repos/PlaylistRepo.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/hearine/service/PlaylistService.java" />
         <option value="$PROJECT_DIR$/src/main/java/me/hearine/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.properties" />
       </list>
     </option>
   </component>
@@ -224,6 +212,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -475,8 +465,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -640,12 +628,13 @@
       <workItem from="1559852547685" duration="1200000" />
       <workItem from="1559990667755" duration="5653000" />
       <workItem from="1560117839666" duration="596000" />
-      <workItem from="1560166933353" duration="7901000" />
+      <workItem from="1560166933353" duration="8321000" />
+      <workItem from="1560179992210" duration="1559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="293649000" />
+    <option name="totallyTimeSpent" value="295628000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,7 +653,7 @@
       <window_info id="UI Designer" order="1" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Web" order="3" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.3201076" />
+      <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.32481506" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" side_tool="true" weight="0.3297587" />
       <window_info anchor="bottom" id="Version Control" order="1" />
@@ -675,12 +664,12 @@
       <window_info anchor="bottom" id="Message" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.32841823" />
-      <window_info anchor="bottom" id="Debug" order="9" weight="0.33914208" />
+      <window_info active="true" anchor="bottom" id="Debug" order="9" visible="true" weight="0.33914208" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="12" weight="0.33512065" />
       <window_info anchor="bottom" id="Java Enterprise" order="13" weight="0.328877" />
-      <window_info active="true" anchor="bottom" id="Run" order="14" visible="true" weight="0.10589813" />
+      <window_info anchor="bottom" id="Run" order="14" weight="0.40214476" />
       <window_info anchor="right" id="Bean Validation" order="0" weight="0.32952252" />
       <window_info anchor="right" id="Database" order="1" weight="0.32952252" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
@@ -708,12 +697,6 @@
           <line>206</line>
           <properties />
           <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/hearine/controller/UserController.java</url>
-          <line>103</line>
-          <properties />
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/me/hearine/domain/cloud/CloudinaryUtils.java</url>
@@ -946,9 +929,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/parts/user/subscriptions.ftl">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/userPlaylistList.ftl">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/userPlaylistList.ftl" />
     <entry file="file://$PROJECT_DIR$/src/main/resources/db/migration/V1__InitDB.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="488">
@@ -980,13 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="36" selection-start-column="36" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="3" selection-end-column="35" />
         </state>
       </provider>
     </entry>
@@ -1055,23 +1029,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/hearine/repos/PlaylistRepo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="46" lean-forward="true" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/me/hearine/service/PlaylistService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="229">
-          <caret line="143" column="55" selection-start-line="143" selection-start-column="55" selection-end-line="143" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE.jar!/org/springframework/web/method/support/InvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="155">
@@ -1079,10 +1036,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/hearine/repos/PlaylistRepo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="19" column="46" selection-start-line="19" selection-start-column="46" selection-end-line="19" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/me/hearine/service/PlaylistService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1935">
+          <caret line="143" column="55" selection-start-line="143" selection-start-column="55" selection-end-line="143" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/me/hearine/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="154" column="5" selection-start-line="154" selection-start-column="5" selection-end-line="154" selection-end-column="5" />
+        <state relative-caret-position="3">
+          <caret line="122" lean-forward="true" selection-start-line="122" selection-end-line="122" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="84" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
         </state>
       </provider>
     </entry>
