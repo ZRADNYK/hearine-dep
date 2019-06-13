@@ -32,7 +32,6 @@ public class UserController { // fixme unsubscribe, avatar
         return "greeting";
     }
 
-    int a = 5;
    // @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/userlist")
     public String userList(Model model) {
