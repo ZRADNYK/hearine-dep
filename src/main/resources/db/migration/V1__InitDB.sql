@@ -8,17 +8,17 @@ create table album (
 
     create table album_band (
         band_id bigint not null,
-        album_id bigint not null, 
+        album_id bigint not null,
         primary key (album_id, band_id) );
 
     create table album_genre (
-        genre_id bigint not null, 
-        album_id bigint not null, 
+        genre_id bigint not null,
+        album_id bigint not null,
         primary key (album_id, genre_id) );
 
     create table album_tag (
-        album_id bigint not null, 
-        tag_id bigint not null, 
+        album_id bigint not null,
+        tag_id bigint not null,
         primary key (album_id, tag_id) );
 
     create table band (

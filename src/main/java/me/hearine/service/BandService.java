@@ -6,6 +6,7 @@ import me.hearine.domain.Band;
 import me.hearine.repos.BandRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.actuate.autoconfigure.condition.ConditionsReportEndpoint;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -37,7 +38,6 @@ public class BandService {
 
     public boolean addArtist(Band band) {
         Band bandFromDb = bandRepo.findByName(band.getName());
-
         if (band != null) {
             return false;
         }
