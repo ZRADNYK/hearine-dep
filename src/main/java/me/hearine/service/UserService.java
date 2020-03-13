@@ -27,8 +27,8 @@ public class UserService implements UserDetailsService {
     @Autowired
     private MailSender mailSender;
 
-    @Autowired
-    private PasswordEncoder passwordEncoder;
+   /* @Autowired
+    private PasswordEncoder passwordEncoder;*/
 
     @Value("${hostname}")
     private String hostname;
@@ -57,7 +57,8 @@ public class UserService implements UserDetailsService {
         user.setActive(true);
         user.setRoles(Collections.singleton(Role.USER));
         user.setActivationCode(UUID.randomUUID().toString());
-        user.setPassword(passwordEncoder.encode(user.getPassword()));
+        // user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword((user.getPassword()));
 
         userRepo.save(user);
 

@@ -49,7 +49,7 @@
             </#if>
             <#if user??>
             <li class="nav-item">
-                <a class="nav-link" href="/user/${user.id}/profile">Profile</a>
+<#--                <a class="nav-link" href="/user/${user.id}/profile">Profile</a>-->
             </li>
             </#if>
             <#if user??>

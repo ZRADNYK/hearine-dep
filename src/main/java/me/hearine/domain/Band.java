@@ -1,8 +1,6 @@
 package me.hearine.domain;
 
 import javax.persistence.*;
-import javax.validation.constraints.NotNull;
-import java.sql.Date;
 import java.util.HashSet;
 import java.util.Set;
 
